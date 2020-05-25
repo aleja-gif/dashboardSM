@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  padding: 0;
   font-family: "Inter", sans-serif;
   color: hsl(230, 17%, 14%);
 }
@@ -18,6 +19,30 @@ body {
 .wrapper {
   padding: 0 20px;
 }
+.grid{
+  display: grid;
+  grid-row-gap: 25px;
+}
+header{
+  background-color:  #f3f3f5;
+  padding-bottom: 100px;
+  border-radius: 0 0 20px 20px;
+  padding-top: 2em;
+}
+.header-total{
+  color: var(--dark-grayish-blue);
+  margin: .5em 0;
+  font-weight: 700;
+  padding-bottom: 1.5em;
+  border-bottom: 2px solid var(--dark-grayish-blue);
+}
+h1{
+  margin: 0;
+  font-size: 1.7 em;
+}
+.top-cards{
+  margin-top: -50px;
+}
 .card {
   border-radius: 5px;
   overflow: hidden;
@@ -32,7 +57,6 @@ body {
 }
 
 .card-title {
-  border: 1px solid green;
   display: flex;
   justify-content: center;
   color: var(--dark-grayish-blue);
@@ -44,16 +68,16 @@ body {
 }
 
 .card-followers {
-  border: 1px solid greenyellow;
+  
 }
 
 .card-followers-number {
-  border: 1px solid red;
+
   font-size: 50px;
   font-weight: 700;
 }
 .card-followers-title {
-  border: 1px solid blueviolet;
+ 
   display: block;
   color: var(--dark-grayish-blue);
   letter-spacing: 5px;
