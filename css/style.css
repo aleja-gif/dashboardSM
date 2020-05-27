@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  padding: 0;
   font-family: "Inter", sans-serif;
   color: hsl(230, 17%, 14%);
 }
@@ -8,7 +9,7 @@ body {
   --bright-Red: hsl(356, 69%, 56%);
   --facebook: hsl(208, 92%, 53%);
   --twitter: hsl(203, 89%, 53%);
-  --instagram1: hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
+  --instagram1: hsl(37, 97%, 70%);
   --instagram2: hsl(329, 70%, 58%);
   --youTube: hsl(348, 97%, 39%);
   --toggle: hsl(230, 22%, 74%);
@@ -18,21 +19,63 @@ body {
 .wrapper {
   padding: 0 20px;
 }
+.grid{
+  display: grid;
+  grid-row-gap: 25px;
+}
+header{
+  background-color:  #f3f3f5;
+  padding-bottom: 100px;
+  border-radius: 0 0 20px 20px;
+  padding-top: 2em;
+}
+.header-total{
+  color: var(--dark-grayish-blue);
+  margin: .5em 0;
+  font-weight: 700;
+  padding-bottom: 1.5em;
+  border-bottom: 2px solid var(--dark-grayish-blue);
+}
+h1{
+  margin: 0;
+  font-size: 1.7 em;
+}
+.top-cards{
+  margin-top: -50px;
+  margin-bottom: 3em;
+}
 .card {
   border-radius: 5px;
   overflow: hidden;
   background: #f0f3fa;
   text-align: center;
+  padding: 1.7em 0;
+  position: relative;
+}
+.card.face:before{
+  background: var(--facebook);
+}
+.card.tw:before{
+  background: var(--twitter);
+}
+.card.ins:before{
+  background-image: linear-gradient(to right, var(--instagram1) 0%, var(--instagram2) 100%);
+}
+.card.yt:before{
+  background: var(--youTube);
 }
 .card:before {
   content: "";
   height: 4px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
   display: block;
-  background: var(--facebook);
+  
 }
 
 .card-title {
-  border: 1px solid green;
   display: flex;
   justify-content: center;
   color: var(--dark-grayish-blue);
@@ -44,16 +87,16 @@ body {
 }
 
 .card-followers {
-  border: 1px solid greenyellow;
+  
 }
 
 .card-followers-number {
-  border: 1px solid red;
+
   font-size: 50px;
   font-weight: 700;
 }
 .card-followers-title {
-  border: 1px solid blueviolet;
+ 
   display: block;
   color: var(--dark-grayish-blue);
   letter-spacing: 5px;
@@ -70,5 +113,56 @@ body {
   justify-content: center;
 }
 .card-today img {
+  margin-right: 5px;
+}
+
+.overview{
+padding-bottom: 2em;
+}
+h2{
+  color: var(--dark-grayish-blue);
+}
+.card-small{
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ grid-row-gap:1em;
+ background: #f0f3fa;
+ border-radius: 8px;
+ padding: 1.7em ;
+}
+.card-small p{
+  margin: 0;
+}
+.card-small-views{
+  color: var(--dark-grayish-blue);
+  font-size: .9em;
+  font-weight: bold;
+}
+.card-small-icon{
+text-align: right;
+}
+.card-small-number{
+font-weight: bold;
+font-size: 2.7em;
+line-height: .9;
+}
+.card-small-percentage{
+  text-align: right;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  color: var(--lime-Green);
+  font-size: .9em;
+  font-weight: bold;
+}
+.card-small-percentage.is-danger{
+  color: var(--bright-Red);
+}
+.card-small-percentage span{
+    display: flex;
+    align-items: center;
+}
+
+.card-small-percentage img{
   margin-right: 5px;
 }
