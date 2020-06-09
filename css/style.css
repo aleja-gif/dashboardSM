@@ -19,28 +19,28 @@ body {
 .wrapper {
   padding: 0 20px;
 }
-.grid{
+.grid {
   display: grid;
   grid-row-gap: 25px;
 }
-header{
-  background-color:  #f3f3f5;
+header {
+  background-color: #f3f3f5;
   padding-bottom: 100px;
   border-radius: 0 0 20px 20px;
   padding-top: 2em;
 }
-.header-total{
+.header-total {
   color: var(--dark-grayish-blue);
-  margin: .5em 0;
+  margin: 0.5em 0;
   font-weight: 700;
   padding-bottom: 1.5em;
   border-bottom: 2px solid var(--dark-grayish-blue);
 }
-h1{
+h1 {
   margin: 0;
   font-size: 1.7 em;
 }
-.top-cards{
+.top-cards {
   margin-top: -50px;
   margin-bottom: 3em;
 }
@@ -52,16 +52,20 @@ h1{
   padding: 1.7em 0;
   position: relative;
 }
-.card.face:before{
+.card.face:before {
   background: var(--facebook);
 }
-.card.tw:before{
+.card.tw:before {
   background: var(--twitter);
 }
-.card.ins:before{
-  background-image: linear-gradient(to right, var(--instagram1) 0%, var(--instagram2) 100%);
+.card.ins:before {
+  background-image: linear-gradient(
+    to right,
+    var(--instagram1) 0%,
+    var(--instagram2) 100%
+  );
 }
-.card.yt:before{
+.card.yt:before {
   background: var(--youTube);
 }
 .card:before {
@@ -72,7 +76,6 @@ h1{
   right: 0;
   top: 0;
   display: block;
-  
 }
 
 .card-title {
@@ -87,16 +90,13 @@ h1{
 }
 
 .card-followers {
-  
 }
 
 .card-followers-number {
-
   font-size: 50px;
   font-weight: 700;
 }
 .card-followers-title {
- 
   display: block;
   color: var(--dark-grayish-blue);
   letter-spacing: 5px;
@@ -116,53 +116,77 @@ h1{
   margin-right: 5px;
 }
 
-.overview{
-padding-bottom: 2em;
+.overview {
+  padding-bottom: 2em;
 }
-h2{
+h2 {
   color: var(--dark-grayish-blue);
 }
-.card-small{
- display: grid;
- grid-template-columns: 1fr 1fr;
- grid-row-gap:1em;
- background: #f0f3fa;
- border-radius: 8px;
- padding: 1.7em ;
+.card-small {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 1em;
+  background: #f0f3fa;
+  border-radius: 8px;
+  padding: 1.7em;
 }
-.card-small p{
+.card-small p {
   margin: 0;
 }
-.card-small-views{
+.card-small-views {
   color: var(--dark-grayish-blue);
-  font-size: .9em;
+  font-size: 0.9em;
   font-weight: bold;
 }
-.card-small-icon{
-text-align: right;
+.card-small-icon {
+  text-align: right;
 }
-.card-small-number{
-font-weight: bold;
-font-size: 2.7em;
-line-height: .9;
+.card-small-number {
+  font-weight: bold;
+  font-size: 2.7em;
+  line-height: 0.9;
 }
-.card-small-percentage{
+.card-small-percentage {
   text-align: right;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
   color: var(--lime-Green);
-  font-size: .9em;
+  font-size: 0.9em;
   font-weight: bold;
 }
-.card-small-percentage.is-danger{
+.card-small-percentage.is-danger {
   color: var(--bright-Red);
 }
-.card-small-percentage span{
-    display: flex;
-    align-items: center;
+.card-small-percentage span {
+  display: flex;
+  align-items: center;
 }
 
-.card-small-percentage img{
+.card-small-percentage img {
   margin-right: 5px;
+}
+
+@media screen and (min-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 25px;
+  }
+  .wrapper {
+    max-width: 1440px;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 25px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 25px;
+  }
 }
